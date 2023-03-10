@@ -3,7 +3,7 @@ const container = document.querySelector(".carousel-container");
 const prevBtn = document.querySelector(".carousel-prev");
 const nextBtn = document.querySelector(".carousel-next");
 const slides = Array.from(document.querySelectorAll(".carousel .image-pack"));
-const spanSlide = Array.from(document.querySelectorAll('span'));
+const spanSlide = Array.from(document.querySelectorAll('.span-carousel'));
 
 let currentSlide = 0;
 
