@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     color:whitesmoke;
-    font-family: 'teko', 'consolas', Courier, monospace;
+    font-family: 'Comfortaa','Unbounded' Courier, monospace;
     box-sizing: border-box;
 }
 header{
@@ -34,6 +34,7 @@ section{
     margin-bottom:60px;
 }
 p{
+    font-family: 'Comfortaa';
     font-size:16px;
     line-height: 1.5em;
     margin-bottom: 1rem;
@@ -216,6 +217,7 @@ summary h2::before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .carousel {
@@ -229,13 +231,13 @@ summary h2::before {
 .carousel-container {
     display: flex;
     width: 100%;
-    height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .image-pack {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 1rem;
 }
@@ -255,10 +257,6 @@ summary h2::before {
     cursor: pointer;
 }
 
-.no-show {
-    display: none;
-}
-
 .span-carousel {
     display: inline-block;
     background-color: lightblue;
@@ -270,4 +268,96 @@ summary h2::before {
 
 .span-active {
     background-color: rgb(47, 184, 229);
+}
+.no-show {
+    display: none;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    perspective: 1000px;
+    height: 15rem;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease-out, visibility 0s linear 0.5s;
+}
+
+.card-back {
+    background-color: transparent;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-out, visibility 0s linear 0.5s;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: .5rem;
+    border-radius: 1rem;
+}
+
+.info-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.card-back div img {
+    object-fit: none;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.card-back div p {
+    font-size: .8em;
+    padding: .3rem 0;
+}
+
+.card-back div h5 {
+    font-size: 1rem;
+    padding: .3rem 0;
+}
+
+.info-card-back a button {
+    border: none;
+    width: 100%;
+    height: 1.8rem;
+    margin: .3rem .2rem;
+    border-radius: .9rem;
+    color:black;
+}
+
+.card.flip .card-front {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-out, visibility 0s linear 0s;
+}
+
+.card.flip .card-back {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease-out, visibility 0s linear 0s;
+}
+
+.card-fullscreen {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    z-index: 9999;
 }
