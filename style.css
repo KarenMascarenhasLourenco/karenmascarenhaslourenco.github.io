@@ -227,7 +227,7 @@ section h2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2;
-    gap: 1rem;
+    gap: .5rem;
     align-items: center;
     justify-items: center;
 }
