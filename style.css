@@ -37,17 +37,23 @@ main {
 
 li {
     display: inline;
-    padding: 0 30px;
+    padding: 0 2rem;
     text-decoration: none;
     color: #fff;
     font-size: 18px;
     list-style: none;
 }
-
+li:hover{
+    background-color: #5e17eb;
+    box-shadow: 0 0 10px 2px white;
+}
+nav li:hover a, .redesocial .shadow:hover a{
+    color: #c1ff72;
+    text-shadow: 0 0 3px white;
+}
 a {
     text-decoration: none;
-    font-family: 'Orbitron',
-        sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 section {
@@ -57,7 +63,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #111;
-    padding: 5rem;
+    padding: 7rem;
     scroll-snap-align: center;
 }
 
@@ -77,6 +83,7 @@ h1 {
     width: fit-content;
     font-family: 'Orbitron', sans-serif;
     font-weight: 800;
+    text-shadow: 0 0 3px white;
 }
 
 h2,
@@ -84,15 +91,16 @@ h3,
 h4 {
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
-    margin-bottom: 2rem;
 }
 
 h3 {
     font-size: 2rem;
+    text-shadow: 0 0 3px white;
 }
 
 h2 {
     font-size: 2.5rem;
+    text-shadow: 0 0 4px white;
 }
 
 .redesocial {
@@ -106,9 +114,10 @@ h2 {
     padding: .2rem;
     background: linear-gradient(45deg, #c1ff72, #4dff03);
     display: flex;
-
 }
-
+.redesocial .shadow:hover{
+    box-shadow: 0 0 10px 5px white;
+}
 .shadow .content {
     padding: 1rem;
     background-color: black;
@@ -118,7 +127,9 @@ h2 {
 .certificate {
     height: 10rem;
 }
-
+.certificate:hover{
+    box-shadow: 0 0 10px 2px white;
+}
 .certificate img {
     height: 100%;
     object-fit: cover;
@@ -325,7 +336,7 @@ button {
 }
 
 .card-back {
-    background-color: lightblue;
+    background-color: transparent;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
@@ -351,19 +362,21 @@ button {
 
 .card-back div p {
     padding: .3rem 0;
+    font-size: .7rem;
 }
 
 .card-back div h5 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: .3rem 0;
 }
 
 .info-card-back a button {
     border: none;
-    width: 8rem;
+    width: 7rem;
     height: 1.8rem;
-    margin: .6rem .2rem;
+    margin: .4rem .2rem;
     border-radius: .9rem;
+    color:black;
 }
 
 .card.flip .card-front {
